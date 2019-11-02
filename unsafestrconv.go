@@ -13,11 +13,11 @@ const Doc = `check for string(int) conversions`
 var Analyzer = &analysis.Analyzer{
 	Doc:      Doc,
 	Name:     "unsafestrconv",
-	Run:      enumcoverCheck,
+	Run:      unsafestrconvCheck,
 	Requires: []*analysis.Analyzer{inspect.Analyzer},
 }
 
-func enumcoverCheck(pass *analysis.Pass) (interface{}, error) {
+func unsafestrconvCheck(pass *analysis.Pass) (interface{}, error) {
 	for _, file := range pass.Files {
 		ast.Inspect(file, func(n ast.Node) bool {
 			switch fn := n.(type) {
