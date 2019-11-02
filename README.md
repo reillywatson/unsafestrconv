@@ -1,6 +1,9 @@
 # unsafestrconv
 An analyzer to detect string(int) casts in Go programs
 
+-[![CircleCI](https://circleci.com/gh/reillywatson/unsafestrconv.svg?style=svg)](https://circleci.com/gh/reillywatson/unsafestrconv)
+-[![codecov](https://codecov.io/gh/reillywatson/unsafestrconv/branch/master/graph/badge.svg)](https://codecov.io/gh/reillywatson/unsafestrconv)
+
 Constructs like this are legal in Go, but probably programming errors:
 
 ```go
