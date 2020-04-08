@@ -12,3 +12,5 @@ fmt.Println(string(x)) // outputs "d", not "100"
 ```
 
 This linter helps catch those!
+
+Note that the Go stdlib now has a better version of this check, you should use it instead! See https://github.com/golang/tools/tree/master/go/analysis/passes/stringintconv/cmd/stringintconv.
